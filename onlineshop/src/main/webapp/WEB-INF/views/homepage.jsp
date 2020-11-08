@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
+<c:set var="contextRoot" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +10,6 @@
 <title>Online Shop</title>
 </head>
 <body>
-	${welcome_message}
+	${contextRoot} says - ${welcome_message}
 </body>
 </html>
