@@ -12,7 +12,24 @@ public class PageController {
 	@RequestMapping(value = {"/", "/home", "/index"})
 	public ModelAndView index() {
 		ModelAndView mv = new ModelAndView("homepage");
-		mv.addObject("welcome_message", "Spring Web MVC Welcome Message");
+		mv.addObject("title", "Home");
+		mv.addObject("userClickedHome", true);
+		return mv;
+	}
+	
+	@RequestMapping(value = "/about")
+	public ModelAndView about() {
+		ModelAndView mv = new ModelAndView("homepage");
+		mv.addObject("title", "About");
+		mv.addObject("userClickedAbout", true);
+		return mv;
+	}
+	
+	@RequestMapping(value = "/contact")
+	public ModelAndView contact() {
+		ModelAndView mv = new ModelAndView("homepage");
+		mv.addObject("title", "Contact");
+		mv.addObject("userClickedContact", true);
 		return mv;
 	}
 	
