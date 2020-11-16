@@ -28,6 +28,9 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="${css}/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Readable Theme -->
+    <link href="${css}/bootstrap-readable-theme.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="${css}/myapp.css" rel="stylesheet">
@@ -42,37 +45,46 @@
 </head>
 
 <body>
-    <!-- Navigation -->
-    <%@include file="./shared/navbar.jsp" %>>
 
-	<!--  home here-->
-	<c:if test="${userClickedHome == true}">
-		<%@include file="home.jsp" %> >
-	</c:if>
+	<div class="wrapper">
+
+	    <!-- Navigation -->
+	    <%@include file="./shared/navbar.jsp" %>>
 	
-    <!--  about here-->
-	<c:if test="${userClickedAbout == true}">
-		<%@include file="about.jsp" %> >
-	</c:if>
+		
+		<div class="content">
+			<!--  home here-->
+			<c:if test="${userClickedHome == true}">
+				<%@include file="home.jsp" %> >
+			</c:if>
+			
+		    <!--  about here-->
+			<c:if test="${userClickedAbout == true}">
+				<%@include file="about.jsp" %> >
+			</c:if>
+			
+			<!--  contact here-->
+			<c:if test="${userClickedContact == true}">
+				<%@include file="contact.jsp" %> >
+			</c:if>
+		
+		</div>
 	
-	<!--  contact here-->
-	<c:if test="${userClickedContact == true}">
-		<%@include file="contact.jsp" %> >
-	</c:if>
-
-	<!-- footer here -->
-	<%@include file="./shared/footer.jsp" %>
-
-    <!-- /.container -->
-
-    <!-- jQuery -->
-    <script src="${js}/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="${js}/bootstrap.min.js"></script>
-    
-    <!--cleated javascript-->
-    <script src="${js}/myapp.js"></script>
+		<!-- footer here -->
+		<%@include file="./shared/footer.jsp" %>
+	
+	    <!-- /.container -->
+	
+	    <!-- jQuery -->
+	    <script src="${js}/jquery.js"></script>
+	
+	    <!-- Bootstrap Core JavaScript -->
+	    <script src="${js}/bootstrap.min.js"></script>
+	    
+	    <!--cleated javascript-->
+	    <script src="${js}/myapp.js"></script>
+	    
+    </div>
 
 </body>
 
